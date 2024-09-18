@@ -1,0 +1,471 @@
+{% load static %}
+<!DOCTYPE <!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>4U</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        
+        <nav class="navigation">
+            <a href="#" class="logo">
+                <img src="static/images/logo.png"/>
+            </a>
+
+            
+            <div class="nav-btns">
+                <a href="{% url 'login_view' %}" class="nav-user">
+                    <i class="fa-regular fa-user"></i>
+                </a>
+                <a href="{% url 'cart_summary' %}" class="nav-cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+            </div>
+        </nav> 
+        <!--main section-->
+        <section id="main">
+            <div class="main-text">
+                <span>New Collection</span>
+                <h1><font>4U is a online shopping website </font> for your skin care routine products!</h1>
+                <p>Discover the best products for your skin type and get the best deals!</p>
+                <a href="#">Shop Now</a>
+            </div>
+
+            <div class=main-img>
+                <img src="static/images/logo.png" />
+            </div>
+        </section><!--main-end-->
+        <!--products-grid-->
+        <section class="product-grid-3">
+            <div class="product-grid-box product-grid-box1">
+                <img src="static/images/s1.jpg"/>
+                <div class="product-grid-text">
+                    <strong>VINANZA GRAPE</strong>
+                    <span>Skin Care Product</span>
+                    <a href="{% url 'product_page' 13 %}">Shop Now</a>
+                </div>
+            </div>
+            <div class="product-grid-box product-grid-box2">
+                <img src="static/images/s2.jpg"/>
+                <div class="product-grid-text">
+                    <strong>SOMEBYMI: Snail Truecica</strong>
+                    <span>Skin Care Product</span>
+                    <a href="{% url 'product_page' 14 %}">Shop Now</a>
+                </div>
+            </div>
+            <div class="product-grid-box product-grid-box3">
+                <img src="static/images/s3.jpg"/>
+                <div class="product-grid-text">
+                    <strong>MAAEMO: Skin Care Pack</strong>
+                    <span>Skin Care Product</span>
+                    <a href="{% url 'product_page' 15 %}">Shop Now</a>
+                </div>
+            </div>
+        </section><!--grid-end-->
+        <!--new products-->
+        <section id="new_products">
+            <!--heading-->
+            <div class="new-p-heading">
+                <h3>New Products</h3>
+                <ul>
+                    <li class="active" data-filter="all">All</li>
+                    <li data-filter="skin">Skin</li>
+                    <li data-filter="body">Body</li>
+                    <li data-filter="hair">Hair</li>
+                </ul>
+                
+            </div>
+
+            <!--Container-->
+            <div class="new-product-container">
+                    <!--box1-->
+                <div class="new-product-box skin">
+
+                    <a href="{% url 'product_page' 16 %}" class="new-product-img">
+                        <img src="static/images/n1.jpg" alt="">
+                        <span>Skin Care</span>
+                    </a>
+                    <div class="new-product-text">
+                        <a href="{% url 'product_page' 16 %}" class="new-product-title">SUNSET NECTAR</a>
+                        <span>25$</span>
+                    </div>
+                </div>
+                <!--box2-->
+                <div class="new-product-box skin">
+
+                    <a href="{% url 'product_page' 17 %}" class="new-product-img">
+                        <img src="static/images/n2.jpg" alt="">
+                        <span>Skin Care</span>
+                    </a>
+                    <div class="new-product-text">
+                        <a href="{% url 'product_page' 17 %}" class="new-product-title">NUDESTIX: Citrus-C Mask </a>
+                        <span>35$</span>
+                    </div>
+                </div>
+                <!--box3-->
+                <div class="new-product-box skin">
+
+                    <a href="{% url 'product_page' 18 %}" class="new-product-img">
+                        <img src="static/images/n3.jpg" alt="">
+                        <span>Skin Care</span>
+                    </a>
+                    <div class="new-product-text">
+                        <a href="{% url 'product_page' 18 %}" class="new-product-title">Dr. Severin: Vitamin C </a>
+                        <span>40$</span>
+                    </div>
+                </div>
+                <!--box4-->
+                <div class="new-product-box skin">
+
+                    <a href="{% url 'product_page' 28 %}" class="new-product-img">
+                        <img src="static/images/n4.jpg" alt="">
+                        <span>Skin Care</span>
+                    </a>
+                    <div class="new-product-text">
+                        <a href="{% url 'product_page' 28 %}" class="new-product-title">BIO BELLE: Collection Pack</a>
+                        <span>55$</span>
+                    </div>
+                </div>
+                <!--box5-->
+                <div class="new-product-box skin">
+
+                    <a href="{% url 'product_page' 20 %}" class="new-product-img">
+                        <img src="static/images/n5.jpg" alt="">
+                        <span>Skin Care</span>
+                    </a>
+                    <div class="new-product-text">
+                        <a href="{% url 'product_page' 20 %}" class="new-product-title">iShine Pack</a>
+                        <span>85$</span>
+                    </div>
+                </div>
+                <!--box6-->
+                <div class="new-product-box hair">
+
+                    <a href="{% url 'product_page' 21 %}" class="new-product-img">
+                        <img src="static/images/n6.jpg" alt="">
+                        <span>Skin Care</span>
+                    </a>
+                    <div class="new-product-text">
+                        <a href="{% url 'product_page' 21 %}" class="new-product-title">GROW GORGEOUS: Intense Pack </a>
+                        <span>65$</span>
+                    </div>
+                </div>
+                <!--box7-->
+                <div class="new-product-box hair">
+
+                    <a href="{% url 'product_page' 22 %}" class="new-product-img">
+                        <img src="static/images/n7.jpg" alt="">
+                        <span>Hair Care</span>
+                    </a>
+                    <div class="new-product-text">
+                        <a href="{% url 'product_page' 22 %}" class="new-product-title">Playa Hair Pack</a>
+                        <span>70$</span>
+                    </div>
+                </div>
+                <!--box8-->
+                <div class="new-product-box hair">
+
+                    <a href="{% url 'product_page' 23 %}" class="new-product-img">
+                        <img src="static/images/n8.jpg" alt="">
+                        <span>Body Care</span>
+                    </a>
+                    <div class="new-product-text">
+                        <a href="{% url 'product_page' 23 %}" class="new-product-title">CHARONIKA: Body Wash</a>
+                        <span>25$</span>
+                    </div>
+                </div>
+                 <!--box9-->
+                 <div class="new-product-box hair">
+
+                    <a href="{% url 'product_page' 24 %}" class="new-product-img">
+                        <img src="static/images/n9.jpg" alt="">
+                        <span>Hair Care</span>
+                    </a>
+                    <div class="new-product-text">
+                        <a href="{% url 'product_page' 24 %}" class="new-product-title">OUAI Medium Hair Shampoo</a>
+                        <span>23$</span>
+                    </div>
+                </div>
+                 <!--box10-->
+                 <div class="new-product-box skin">
+
+                    <a href="{% url 'product_page' 25 %}" class="new-product-img">
+                        <img src="static/images/n10.jpg" alt="">
+                        <span>Skin Care</span>
+                    </a>
+                    <div class="new-product-text">
+                        <a href="{% url 'product_page' 25 %}" class="new-product-title">Aesop: Avocado</a>
+                        <span>40$</span>
+                    </div>
+                </div>
+            
+            </div>
+        </section>
+<!--products-grid-half-->
+<section class="product-grid-half">
+    <div class="product-grid-box product-grid-box1">
+        <img src="static/images/s1.jpg"/>
+        <div class="product-grid-text">
+            <strong>VINANZA GRAPE</strong>
+            <span>Skin Care Product</span>
+            <a href="{% url 'product_page' 13 %}">Shop Now</a>
+        </div>
+    </div>
+    <div class="product-grid-box product-grid-box2">
+        <img src="static/images/s2.jpg"/>
+        <div class="product-grid-text">
+            <strong>SOMEBYMI: Snail Truecica</strong>
+            <span>Skin Care Product</span>
+            <a href="{% url 'product_page' 14 %}">Shop Now</a>
+        </div>
+    </div>
+    <div class="product-grid-box product-grid-box3">
+        <img src="static/images/s3.jpg"/>
+        <div class="product-grid-text">
+            <strong>MAAEMO: Skin Care Pack</strong>
+            <span>Skin Care Product</span>
+            <a href="{% url 'product_page' 15 %}">Shop Now</a>
+        </div>
+    </div>
+</section><!--half-grid-end-->
+
+<!--Popular-->
+<section id="popular-product">
+    <!--Heading-->
+    <div class="popular-heading">
+        <h3>Popular Products</h3>
+        <a href="#">All</a>
+    </div>
+    <!--container-->
+    <div class="popular-container">
+        <!---box1-->
+        <div class="popular-box">
+            <a href="{% url 'product_page' 26 %}" class="popular-box-img">
+                <img src="static/images/k1.jpg"  alt="">
+            </a>
+
+            <div class="popular-box-text">
+                <a href="{% url 'product_page' 26 %}">Odele Pack</a>
+                <span class="p-category">Body Product</span>
+                <span class="p-price">45$<del>50$</del></span>
+            </div>
+        </div>
+        <!---box2-->
+        <div class="popular-box">
+            <a href="{% url 'product_page' 2 %}" class="popular-box-img">
+                <img src="static/images/k2.jpg"  alt="">
+            </a>
+
+            <div class="popular-box-text">
+                <a href="{% url 'product_page' 2 %}">PUREOLOGY Hair Spray</a>
+                <span class="p-category">Hair Product</span>
+                <span class="p-price">32$<del>35$</del></span>
+            </div>
+        </div>
+        <!---box3-->
+        <div class="popular-box">
+            <a href="{% url 'product_page' 3 %}" class="popular-box-img">
+                <img src="static/images/k3.jpg"  alt="">
+            </a>
+
+            <div class="popular-box-text">
+                <a href="{% url 'product_page' 3 %}">OUAI Shampoo</a>
+                <span class="p-category">Hair Product</span>
+                <span class="p-price">50$<del>55$</del></span>
+            </div>
+        </div>
+        <!---box4-->
+        <div class="popular-box">
+            <a href="{% url 'product_page' 4 %}" class="popular-box-img">
+                <img src="static/images/k4.jpg"  alt="">
+            </a>
+
+            <div class="popular-box-text">
+                <a href="{% url 'product_page' 4 %}">Body Oil</a>
+                <span class="p-category">Body Product</span>
+                <span class="p-price">48$<del>50$</del></span>
+            </div>
+        </div>
+        <!---box5-->
+        <div class="popular-box">
+            <a href="{% url 'product_page' 5 %}" class="popular-box-img">
+                <img src="static/images/k5.jpg"  alt="">
+            </a>
+
+            <div class="popular-box-text">
+                <a href="{% url 'product_page' 5 %}">Pre Shampoo Mask</a>
+                <span class="p-category">Hair Product</span>
+                <span class="p-price">38$<del>40$</del></span>
+            </div>
+        </div>
+        <!---box6-->
+        <div class="popular-box">
+            <a href="{% url 'product_page' 6 %}" class="popular-box-img">
+                <img src="static/images/k6.jpg"  alt="">
+            </a>
+
+            <div class="popular-box-text">
+                <a href="{% url 'product_page' 6 %}">Hair Oil</a>
+                <span class="p-category">Hair Product</span>
+                <span class="p-price">42$<del>45$</del></span>
+            </div>
+        </div>
+        <!---box7-->
+        <div class="popular-box">
+            <a href="{% url 'product_page' 7 %}" class="popular-box-img">
+                <img src="static/images/k7.jpg"  alt="">
+            </a>
+
+            <div class="popular-box-text">
+                <a href="{% url 'product_page' 7 %}">Fenty Hair Pack</a>
+                <span class="p-category">Hair Product</span>
+                <span class="p-price">75$<del>80$</del></span>
+            </div>
+        </div>
+        <!---box8-->
+        <div class="popular-box">
+            <a href="{% url 'product_page' 8 %}" class="popular-box-img">
+                <img src="static/images/k8.jpg"  alt="">
+            </a>
+
+            <div class="popular-box-text">
+                <a href="{% url 'product_page' 8 %}">Gisou Honey Pack</a>
+                <span class="p-category">Hair Product</span>
+                <span class="p-price">60$<del>62$</del></span>
+            </div>
+        </div>
+        <!---box9-->
+        <div class="popular-box">
+            <a href="{% url 'product_page' 27 %}" class="popular-box-img">
+                <img src="static/images/k9.jpg"  alt="">
+            </a>
+
+            <div class="popular-box-text">
+                <a href="{% url 'product_page' 27 %}">OUAI Shampoo</a>
+                <span class="p-category">Face Product</span>
+                <span class="p-price">28$<del>32$</del></span>
+            </div>
+        </div>
+        <!---box10-->
+        <div class="popular-box">
+            <a href="{% url 'product_page' 10 %}" class="popular-box-img">
+                <img src="static/images/k10.jpg"  alt="">
+            </a>
+
+            <div class="popular-box-text">
+                <a href="{% url 'product_page' 10 %}">PARADOX REPAIR 3 in one </a>
+                <span class="p-category">Hair Product</span>
+                <span class="p-price">30$<del>38$</del></span>
+            </div>
+        </div>
+        <!---box11-->
+        <div class="popular-box">
+            <a href="{% url 'product_page' 11 %}" class="popular-box-img">
+                <img src="static/images/k11.jpg"  alt="">
+            </a>
+
+            <div class="popular-box-text">
+                <a href="{% url 'product_page' 11 %}">The Glow OIL</a>
+                <span class="p-category">Skin Product</span>
+                <span class="p-price">45$<del>50$</del></span>
+            </div>
+        </div>
+        <!---box12-->
+        <div class="popular-box">
+            <a href="{% url 'product_page' 12 %}" class="popular-box-img">
+                <img src="static/images/k12.jpg"  alt="">
+            </a>
+
+            <div class="popular-box-text">
+                <a href="{% url 'product_page' 12 %}">Hair Treatment Mask</a>
+                <span class="p-category"> Product</span>
+                <span class="p-price">35$<del>40$</del></span>
+            </div>
+        </div>
+    </div>
+
+</section>
+<!--footer-->
+<footer>
+    <div class="footer-container">
+        <!--company-box-->
+        <div class="footer-company-box">
+            <!--logo-->
+            <a href="#" class="footer-logo">About</a>
+            <!--details-->
+            <p>Welcome to 4U, your go-to destination for quality skincare products! We are passionate about helping you look and feel your best by offering a wide range of carefully curated self care solutions.</p>
+            
+            <!--social-->
+            <div class="footer-social">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+
+        </div>
+        <!--link-box-->
+
+        <div class="footer-link-box">
+            <strong>Main Links</strong>
+            <ul>
+                <li><a href="#">Our Values</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Disclaimer</a></li>
+                <li><a href="#">Terms And Conditions</a></li>
+            </ul>
+        </div>
+
+
+         
+
+
+
+    </div>
+    <!--bottom-->
+
+<div class="footer-bottom">
+    <span class="footer-owner">Made By Me</span>
+    <span class="copyright">© Copyright 2024 - Me</span>
+</div>
+</footer>
+
+        <!--JQuery-->
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+<!--Script-->
+<script>
+    // Correcting the typo in 'function'
+    var selector = '.new-p-heading li';
+
+    $(selector).on('click', function(){
+        $(selector).removeClass('active');
+        $(this).addClass('active');
+    });
+
+    /*Box-Filter*/
+    $(document).ready(function(){
+        // Make sure this click handler is correct
+        $('.new-p-heading li').click(function(){
+            const value = $(this).attr('data-filter');
+            if(value == 'all'){
+                $('.new-product-box').show('1000');
+            } else {
+                $('.new-product-box').not('.'+value).hide('1000');
+                $('.new-product-box').filter('.'+value).show('1000');
+            }
+        });
+    });
+</script>
+
+    </body>
+</html>

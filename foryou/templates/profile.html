@@ -1,0 +1,197 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>4U | User Profile</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Poppins;
+            background-color: #ffffff;
+            /* Mainly white background */
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #8b3d74;
+            /* Accent color 1 */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .profile-header {
+            background-color: #fed2d1;
+            /* Accent color 2 */
+            padding: 10px;
+            border-bottom: 1px solid #8b3d74;
+            /* Accent color 1 */
+        }
+        
+        .profile-header h1 {
+            margin: 0;
+            color: #8b3d74;
+            /* Accent color 1 */
+        }
+        
+        .profile-info {
+            padding: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #8b3d74;
+            /* Accent color 1 */
+        }
+        
+        button[type="submit"] {
+            background-color: #8b3d74;
+            /* Accent color 1 */
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        button[type="submit"]:hover {
+            background-color: #7a2d69;
+            /* Darker accent color 1 */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navigation">
+        <a href="/" class="logo">
+            <img src="{% static 'images/logo.png' %}"/>
+        </a>
+
+        <form class="search-box">
+            <input type="text" placeholder="Search Products Here" required/>
+            <button>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+        <div class="nav-btns">
+            <a href="/login" class="nav-user">
+                <i class="fa-regular fa-user"></i>
+            </a>
+            <a href="/cart" class="nav-cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+        </div>
+    </nav> 
+	<div class="container">
+		<div class="profile-header">
+			<h1>My Profile</h1>
+		</div>
+		<div class="profile-info">
+			<form>
+				<h2>Account Information</h2>
+				<div class="form-group">
+					<label for="name">Name:</label>
+					<input type="text" id="name" value="John Doe">
+				</div>
+				<div class="form-group">
+					<label for="email">Email:</label>
+					<input type="email" id="email" value="johndoe@example.com">
+				</div>
+				<div class="form-group">
+					<label for="phone">Phone Number:</label>
+					<input type="tel" id="phone" value="123-456-7890">
+				</div>
+				<h2>Address</h2>
+				<div class="form-group">
+					<label for="address1">Address 1:</label>
+					<input type="text" id="address1" value="123 Main St">
+				</div>
+				<div class="form-group">
+					<label for="address2">Address 2:</label>
+					<input type="text" id="address2" value="Apt 101">
+				</div>
+				<div class="form-group">
+					<label for="city">City:</label>
+					<input type="text" id="city" value="Anytown">
+				</div>
+				<div class="form-group">
+					<label for="state">State:</label>
+					<select id="state">
+						<option value="CA">California</option>
+						<option value="NY">New York</option>
+						<!-- Add more states here -->
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="zip">Zip Code:</label>
+					<input type="text" id="zip" value="12345">
+				</div>
+				<button type="submit">Save Changes</button>
+			</form>
+		</div>
+	</div>
+
+    <!--footer-->
+<footer>
+    <div class="footer-container">
+        <!--company-box-->
+        <div class="footer-company-box">
+            <!--logo-->
+            <a href="#" class="footer-logo">Logo</a>
+            <!--details-->
+            <p>Welcome to 4U, your go-to destination for quality skincare products! We are passionate about helping you look and feel your best by offering a wide range of carefully curated self care solutions.</p>
+            <!--social-->
+            <div class="footer-social">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+
+        </div>
+        <!--link-box-->
+
+        <div class="footer-link-box">
+            <strong>Main Links</strong>
+            <ul>
+                <li><a href="#">Our Values</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Disclaimer</a></li>
+                <li><a href="#">Terms And Conditions</a></li>
+            </ul>
+        </div>
+
+
+         
+
+
+
+    </div>
+    <!--bottom-->
+
+<div class="footer-bottom">
+    <span class="footer-owner">Made By Me</span>
+    <span class="copyright">© Copyright 2024 - Me</span>
+</div>
+</footer>
+</body>
+</html>
